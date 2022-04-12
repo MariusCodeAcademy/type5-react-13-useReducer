@@ -23,21 +23,14 @@ function Counter() {
   const [state, dispatch] = useReducer(countReducer, initCounterValue);
 
   function handleIncrementBy(x) {
-    // setCount((prevState) => prevState + x);
     dispatch({ type: 'addAmount', payload: x });
   }
 
   function handleIncrement() {
     dispatch({ type: 'add' });
-    // console.log('+');
-    // kei state priklauso nuo pries tai state tai atnaujinam su funkcija
-    // setCount((prevState) => prevState + 1);
-    // setCount(count + 1); // no no
   }
   function handleDecrement() {
     dispatch({ type: 'minus' });
-    // console.log('-');
-    // setCount((prevState) => prevState - 1);
   }
 
   return (
