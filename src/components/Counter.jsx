@@ -1,7 +1,7 @@
 import { useState, useReducer } from 'react';
 
 const initCounterValue = { count: 0 };
-
+// dispatch({ type: 'add' }); action === { type: 'add' }
 function countReducer(state, action) {
   console.log('action ===', action);
   console.log('state ===', state);
