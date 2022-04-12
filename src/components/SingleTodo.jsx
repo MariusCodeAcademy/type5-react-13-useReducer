@@ -8,6 +8,7 @@ function SingleTodo(props) {
       <button onClick={() => props.onCheck(props.id)} className={css.btn}>
         check
       </button>
+      <button className={css.btn}>Delete me</button>
     </li>
   );
 }
