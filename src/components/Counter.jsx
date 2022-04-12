@@ -11,8 +11,8 @@ function countReducer(state, action) {
       return { count: state.count + 1 };
     case 'minus':
       return { count: state.count - 1 };
-    case 'add5':
-      return { count: state.count + 5 };
+    case 'addAmount':
+      return { count: state.count + action.payload };
     default:
       return { count: 1000 };
   }
@@ -24,7 +24,7 @@ function Counter() {
 
   function handleIncrementBy(x) {
     // setCount((prevState) => prevState + x);
-    dispatch({ type: 'add5' });
+    dispatch({ type: 'addAmount', payload: x });
   }
 
   function handleIncrement() {
@@ -44,7 +44,7 @@ function Counter() {
     <div className='counter'>
       <h2>{state.count}</h2>
       <div className='control'>
-        <button onClick={() => handleIncrementBy(5)}>+5</button>
+        <button onClick={() => handleIncrementBy(10)}>+5</button>
         <button onClick={handleIncrement}>+</button>
         <button onClick={handleDecrement}>-</button>
       </div>
